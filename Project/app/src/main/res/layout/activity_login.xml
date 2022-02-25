@@ -74,6 +74,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cirLoginButton"
                 style="@style/loginButton"
+                android:background="@drawable/rounded_corner_button"
                 android:text="Login"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/loginViewsMargin" />
@@ -126,6 +127,7 @@
                 android:layout_marginTop="20dp">
 
                 <ImageView
+                    android:id="@+id/signinwithgoogle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_google_plus"
@@ -134,13 +136,14 @@
 
         </LinearLayout>
     </ScrollView>
+
     <View
-        android:layout_marginTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_width="11dp"
         android:layout_height="match_parent"
-        android:background="@drawable/ic_side_bg"/>
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_side_bg" />
 
     <ImageView
         android:id="@+id/goto_register"

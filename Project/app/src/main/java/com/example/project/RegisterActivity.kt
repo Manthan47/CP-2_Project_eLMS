@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
+import android.view.Window
+import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -16,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.core.view.View
+import java.lang.NullPointerException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -27,6 +31,11 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         //val setDate = findViewById(R.id.editTextDOB) as EditText
+
+//        requestWindowFeature(Window.FEATURE_NO_TITLE)
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -52,9 +61,10 @@ class RegisterActivity : AppCompatActivity() {
             val dob=editTextDOB.text.toString()
             val rollno=editTextRollN.text.toString()
             val mobileno=editTextMobile.text.toString()
+            val password=editTextPassword.text.toString()
 
             database = FirebaseDatabase.getInstance().getReference("Users")
-            val User = User(name,email,dob,rollno,mobileno)
+            val User = User(name,email,dob,rollno,mobileno,password)
             database.child(name).setValue(User).addOnSuccessListener {
 
 //                binding.name.text.clear()
