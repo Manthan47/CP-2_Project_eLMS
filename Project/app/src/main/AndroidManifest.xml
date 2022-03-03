@@ -19,6 +19,7 @@
         android:theme="@style/Theme.Project">
         <activity
             android:name=".RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="true" />
         <activity
             android:name=".DashboardActivity"
