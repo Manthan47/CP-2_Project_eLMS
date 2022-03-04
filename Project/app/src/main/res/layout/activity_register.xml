@@ -148,17 +148,15 @@
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/cirRegisterButton"
                         style="@style/loginButton"
-                        android:layout_width="110dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="@dimen/loginViewsMargin"
                         android:background="@drawable/rounded_corner_button"
-                        android:text="Register" />
+                        android:text="Register"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/loginViewsMargin" />
 
                     <TextView
                         style="@style/parent"
                         android:layout_marginTop="@dimen/loginViewsMargin"
                         android:onClick="onLoginClick"
-
                         android:text="Already have an account?"
                         android:textAlignment="center"
                         android:textColor="@color/themeColor"
@@ -208,7 +206,6 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:id="@+id/signup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
