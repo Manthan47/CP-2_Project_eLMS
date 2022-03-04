@@ -74,6 +74,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cirLoginButton"
                 style="@style/loginButton"
+                android:background="@drawable/rounded_corner_button"
                 android:text="Login"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/loginViewsMargin" />

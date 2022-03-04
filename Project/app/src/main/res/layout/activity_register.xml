@@ -148,6 +148,7 @@
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/cirRegisterButton"
                         style="@style/loginButton"
+                        android:background="@drawable/rounded_corner_button"
                         android:text="Register"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin" />
