@@ -41,10 +41,10 @@
                 <TextView
                     android:id="@+id/usernameTextView"
                     style="@style/viewParent.headerText"
-                    android:text="Kapil Mohan"
-                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
                     android:layout_toRightOf="@id/profileCircleImageView"
-                    android:layout_marginTop="20dp"/>
+                    android:text="User"
+                    android:textSize="18sp" />
 
                 <TextView
                     style="@style/viewParent.headerText"

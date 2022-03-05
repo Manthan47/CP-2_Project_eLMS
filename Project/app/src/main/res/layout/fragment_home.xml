@@ -23,7 +23,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Hello abc"
+                    android:text="Hello User"
                     style="@style/viewParent.headerText" />
 
                 <RelativeLayout

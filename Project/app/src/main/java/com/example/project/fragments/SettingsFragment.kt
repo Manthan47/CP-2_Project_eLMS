@@ -29,22 +29,17 @@ class SettingsFragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-
-            darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
-
-                // if the button is checked, i.e., towards the right or enabled
-                // enable dark mode, change the text to disable dark mode
-                // else keep the switch text to enable dark mode
-                if (darkModeSwitch.isChecked) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                    darkModeSwitch.text = "Disable dark mode"
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                    darkModeSwitch.text = "Enable dark mode"
-                }
-            }
-
         }
+//        darkModeSwitch.setOnClickListener {
+//            if (darkModeSwitch.isChecked) {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//                darkModeSwitch.text = "Disable dark mode"
+//            } else {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//                darkModeSwitch.text = "Enable dark mode"
+//            }
+//        }
+
     }
 
     override fun onCreateView(
@@ -52,6 +47,7 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
