@@ -20,6 +20,10 @@
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/drawable/ic_goto_img.xml" value="0.14322916666666666" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/drawable/rounded.xml" value="0.1609375" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/drawable/rounded_corner_button.xml" value="0.26614583333333336" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_chat.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_chatbot.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_course.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_courses.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -31,7 +35,8 @@
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/fragment_chat.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/message_item.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/menu/main.xml" value="0.12708333333333333" />

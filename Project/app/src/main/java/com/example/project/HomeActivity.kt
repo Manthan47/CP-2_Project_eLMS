@@ -2,13 +2,11 @@ package com.example.project
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_dashboard.*
 
-
-class DashboardActivity : AppCompatActivity(){
-
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main)
@@ -50,27 +48,6 @@ class DashboardActivity : AppCompatActivity(){
                 }
 
             }
-
         }
-
-//        val homeFragment = HomeFragment()
-//        val settingsFragment = SettingsFragment()
-//        val chatFragment = ChatFragment()
-//
-//        makeCurrentFragment(homeFragment)
-//        bottom_navigation.setOnNavigationItemReselectedListener {
-//            when (it.itemId){
-//                R.id.navigationHome -> makeCurrentFragment(homeFragment)
-//                R.id.navigationMyProfile -> makeCurrentFragment(settingsFragment)
-//                R.id.navigationChat -> makeCurrentFragment(chatFragment)
-//            }
-//            true
-//        }
-
     }
-//    private fun makeCurrentFragment(fragment: Fragment) =
-//        supportFragmentManager.beginTransaction().apply{
-//            replace(R.id.fl_wrapper,fragment)
-//            commit()
-//        }
 }
