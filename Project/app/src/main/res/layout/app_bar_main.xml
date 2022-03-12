@@ -23,17 +23,32 @@
     <include layout="@layout/content_main" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
+        android:id="@+id/bottom_navigation"
+        android:background="@drawable/rounded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        android:foreground="?attr/selectableItemBackground"
-        app:menu="@menu/master_bottom_navigation"
         app:elevation="10dp"
         app:labelVisibilityMode="labeled"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:itemIconTint="@color/bottom_navigation_color"
         app:itemTextColor="@color/bottom_navigation_color"
-        app:itemBackground="@color/bottomNavigationBackground"/>
+        app:menu="@menu/master_bottom_navigation"/>
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:background="?android:attr/windowBackground"-->
+<!--        android:foreground="?attr/selectableItemBackground"-->
+<!--        app:menu="@menu/master_bottom_navigation"-->
+<!--        app:elevation="10dp"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:itemIconTint="@color/bottom_navigation_color"-->
+<!--        app:itemTextColor="@color/bottom_navigation_color"-->
+<!--        app:itemBackground="@color/bottomNavigationBackground"/>-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

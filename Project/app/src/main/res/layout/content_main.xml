@@ -1,139 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_main"
-    style="@style/parent.contentLayout">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <androidx.core.widget.NestedScrollView
+    <FrameLayout
+        android:id="@+id/fl_wrapper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        android:foregroundGravity="top">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/parent.contentLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:showIn="@layout/app_bar_main">
 
-            <TextView
-                android:text="Hello abc"
-                style="@style/viewParent.headerText" />
-
-            <RelativeLayout
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="20dp"
-                    android:minHeight="200dp"
-                    app:cardBackgroundColor="#11CFC5"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="10dp"
-                    app:cardPreventCornerOverlap="false">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/viewParent.headerText"
+                        android:text="Hello abc" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="20dp"
+                            android:minHeight="200dp"
+                            app:cardBackgroundColor="#11CFC5"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="10dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Overall course\nsubmissions"
+                                    android:textColor="@color/whiteBodyColor"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <ProgressBar
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="150dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:progress="60"
+                                    android:progressDrawable="@drawable/progress_drawable" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:text="60% Complete"
+                                    android:textColor="@color/whiteBodyColor"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:elevation="44dp"
+                            android:src="@drawable/header_image" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"></RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            style="@style/viewParent.headerText"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Courses" />
+
+                        <TextView
+                            style="@style/viewParent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="See All"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="@dimen/headerMoreTextSize"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <!--remove the below layout with recycler view, use card poplar courses as model for design-->
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:orientation="vertical"
-                        android:padding="10dp">
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Overall course\nsubmissions"
-                            android:textColor="@color/whiteBodyColor"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
+                        <include layout="@layout/card_popular_courses" />
 
-                        <ProgressBar
-                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="150dp"
-                            android:layout_height="5dp"
-                            android:layout_marginTop="15dp"
-                            android:progress="60"
-                            android:progressDrawable="@drawable/progress_drawable" />
+                        <include layout="@layout/card_popular_courses" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="15dp"
-                            android:text="60% Complete"
-                            android:textColor="@color/whiteBodyColor"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+                        <include layout="@layout/card_popular_courses" />
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="true"
-                    android:elevation="44dp"
-                    android:src="@drawable/header_image" />
-            </RelativeLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp">
-
-                <TextView
-                    style="@style/viewParent.headerText"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="Courses" />
-
-                <TextView
-                    android:layout_alignParentRight="true"
-                    style="@style/viewParent"
-                    android:text="See All"
-                    android:layout_centerVertical="true"
-                    android:textSize="@dimen/headerMoreTextSize"
-                    android:textColor="@color/primaryTextColor"
-                    android:textStyle="bold"/>
-
-            </RelativeLayout>
-
-            <!--remove the below layout with recycler view, use card poplar courses as model for design-->
-            
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <include layout="@layout/card_popular_courses"/>
-                <include layout="@layout/card_popular_courses"/>
-                <include layout="@layout/card_popular_courses"/>
-
-            </LinearLayout>
-
-
-
-
-            <!--remove the below layout with recycler view, use card poplar courses as model for design-->
-
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded"
+        app:elevation="10dp"
+        app:itemIconTint="@color/bottom_navigation_color"
+        app:itemTextColor="@color/bottom_navigation_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:menu="@menu/master_bottom_navigation" />
+</RelativeLayout>
