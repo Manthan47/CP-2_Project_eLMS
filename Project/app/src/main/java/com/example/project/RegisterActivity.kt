@@ -34,6 +34,16 @@ class RegisterActivity : AppCompatActivity() {
 //        setDate.setOnClickListener{
 //            setDate()
 //        }
+
+        // get reference to ImageView
+        val iv_click_me = findViewById(R.id.goto_login) as ImageView
+        // set on-click listener
+        iv_click_me.setOnClickListener {
+            // your code to perform when the user clicks on the ImageView
+            val intent = Intent(applicationContext,MainActivity::class.java)
+            startActivity(intent)
+        }
+
         val editTextName = findViewById<EditText>(R.id.editTextName)
         val editTextEmail = findViewById<EditText>(R.id.editTextEmail)
         val editTextDOB = findViewById<EditText>(R.id.editTextDOB)

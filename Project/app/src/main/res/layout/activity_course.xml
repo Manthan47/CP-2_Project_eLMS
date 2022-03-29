@@ -24,23 +24,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/card_popular_courses"/>
-            <include layout="@layout/card_popular_courses"/>
-            <include layout="@layout/card_popular_courses"/>
+            <include layout="@layout/card_courses"/>
+            <include layout="@layout/card_courses"/>
+            <include layout="@layout/card_courses"/>
 
         </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="30dp"
-            app:cardBackgroundColor="#11CFC5"
-            app:cardCornerRadius="16dp">
-            <TextView
-                style="@style/viewParent.headerText"
-                android:text="Assignment"/>
-
-        </androidx.cardview.widget.CardView>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
