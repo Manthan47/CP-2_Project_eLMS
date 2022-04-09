@@ -13,6 +13,9 @@
             android:name=".AdminStudentList"
             android:exported="true" />
         <activity
+            android:name=".AdminDeleteUser"
+            android:exported="true" />
+        <activity
             android:name=".AdminLogin"
             android:exported="true">
             <intent-filter>

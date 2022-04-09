@@ -18,5 +18,13 @@ class AdminMainActivity : AppCompatActivity() {
 
         }
 
+        delete_user.setOnClickListener {
+
+            var i = Intent(this,AdminDeleteUser::class.java)
+            startActivity(i)
+            finish()
+
+        }
+
     }
 }
