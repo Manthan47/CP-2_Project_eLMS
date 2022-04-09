@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SEM VI/CP - II/Project/admin/src/main/res/layout/activity_admin_deleteuser.xml" value="0.2" />
+        <entry key="..\:/SEM VI/CP - II/Project/admin/src/main/res/layout/activity_admin_student_list.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/admin/src/main/res/layout/activity_adminlogin.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/admin/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/SEM VI/CP - II/Project/admin/src/main/res/layout/students_list.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/drawable-night/ic_add_img.xml" value="0.26614583333333336" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/drawable-v21/ic_menu_send.xml" value="0.26614583333333336" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/drawable-v24/ic_back_img.xml" value="0.14322916666666666" />
@@ -25,11 +30,13 @@
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_course.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_courses.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_edit_profile.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_settings.xml" value="0.2" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/card_courses.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/card_frutorials.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/card_popular_courses.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/content_main.xml" value="0.25" />

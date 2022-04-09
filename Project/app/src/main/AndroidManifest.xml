@@ -38,6 +38,9 @@
             android:name=".SettingsActivity"
             android:exported="true" />
         <activity
+            android:name=".EditProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".chatbot.ChatbotActivity"
             android:exported="true" />
         <activity

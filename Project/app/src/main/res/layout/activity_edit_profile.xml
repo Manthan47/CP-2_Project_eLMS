@@ -23,18 +23,63 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/whiteTextColor"
+                app:cardCornerRadius="10dp">
 
-                <TextView
-                    style="@style/viewParent.headerText.NoMode"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:text="Here’s your first\nstep with us! "
-                    android:textColor="@color/whiteTextColor" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-            </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/uploadimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/updateDisplayPicture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Update Display Picture"
+                        android:textColor="#202E3E"
+                        android:textSize="18dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/displayImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_below="@+id/updateDisplayPicture"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/ic_launcher_background"
+                        app:civ_border_color="#2196F3"
+                        app:civ_border_width="2dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+                    <Button
+                        android:id="@+id/chooseDisplayImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/displayImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/rounded_navy_blue_button"
+                        android:drawableLeft="@drawable/icon_camera"
+                        android:drawablePadding="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:text="Choose Image"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -119,49 +164,13 @@
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputPassword"
-                        style="@style/parent"
-                        android:layout_marginTop="@dimen/loginViewsMargin">
-
-                        <EditText
-                            android:id="@+id/editTextPassword"
-                            style="@style/modifiedEditText"
-                            android:hint="@string/login_password_hint"
-                            android:inputType="textPassword"
-                            android:maxLines="1" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputConfirmPassword"
-                        style="@style/parent"
-                        android:layout_marginTop="@dimen/loginViewsMargin">
-
-                        <EditText
-                            android:id="@+id/editTextConfirmPassword"
-                            style="@style/modifiedEditText"
-                            android:hint="Confirm Password"
-                            android:inputType="textPassword"
-                            android:maxLines="1" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/cirRegisterButton"
+                        android:id="@+id/cirSaveButton"
                         style="@style/loginButton"
                         android:background="@drawable/rounded_corner_button"
-                        android:text="Register"
+                        android:text="Save"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin" />
-
-                    <TextView
-                        style="@style/parent"
-                        android:layout_marginTop="@dimen/loginViewsMargin"
-                        android:onClick="onLoginClick"
-                        android:text="Already have an account?"
-                        android:textAlignment="center"
-                        android:textColor="@color/themeColor"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -180,16 +189,6 @@
                     android:layout_weight="3"
                     android:background="@color/whiteTextColor" />
 
-                <TextView
-                    style="@style/viewParent.headerText.NoMode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="6"
-                    android:text="Use other Methods"
-                    android:textAlignment="center"
-                    android:textColor="@color/whiteTextColor"
-                    android:textSize="12sp" />
-
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
@@ -198,40 +197,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_google_plus" />
-            </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
-    <View
-        android:layout_marginTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_width="11dp"
-        android:layout_height="match_parent"
-        android:background="@drawable/ic_side_bg"/>
 
-    <ImageView
-        android:id="@+id/goto_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="11dp"
-        android:layout_marginBottom="30dp"
-        android:adjustViewBounds="false"
-        android:onClick="onLoginClick"
-        android:src="@drawable/ic_back_img" />
 </RelativeLayout>

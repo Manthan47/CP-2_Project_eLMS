@@ -25,6 +25,11 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
+        editProfile.setOnClickListener {
+            val intent = Intent(applicationContext,EditProfileActivity::class.java)
+            startActivity(intent)
+        }
+
         logout.setOnClickListener {
             mAuth!!.signOut()
             goToLogin()
