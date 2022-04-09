@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_upload_notice.*
 
 class AdminMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,14 @@ class AdminMainActivity : AppCompatActivity() {
         delete_user.setOnClickListener {
 
             var i = Intent(this,AdminDeleteUser::class.java)
+            startActivity(i)
+            finish()
+
+        }
+
+        upload_notice_main.setOnClickListener {
+
+            var i = Intent(this,UploadNotice::class.java)
             startActivity(i)
             finish()
 

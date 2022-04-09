@@ -37,6 +37,5 @@ class AdminDeleteUser : AppCompatActivity() {
         }.addOnFailureListener{
             Toast.makeText(this,"Failed To Delete",Toast.LENGTH_SHORT).show()
         }
-
     }
 }
