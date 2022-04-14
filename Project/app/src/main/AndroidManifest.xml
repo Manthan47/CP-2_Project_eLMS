@@ -18,9 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
-            android:name=".RegisterActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".notice.NoticeActivity"
             android:exported="true" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DashboardActivity"
             android:exported="true" />
@@ -52,7 +55,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

@@ -2,8 +2,8 @@ package com.example.project
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.project.notice.NoticeActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -15,6 +15,12 @@ class HomeActivity : AppCompatActivity() {
 
         Bottomnavigationview.setOnItemSelectedListener {
             when (it.itemId) {
+                R.id.navigationNotice->{
+                    Intent(this, NoticeActivity::class.java).apply {
+                        startActivity(this)
+                    }
+                    return@setOnItemSelectedListener true
+                }
                 R.id.navigationHome ->{
                     Intent(this, HomeActivity::class.java).apply {
                         startActivity(this)
