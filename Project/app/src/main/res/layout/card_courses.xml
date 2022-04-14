@@ -32,9 +32,10 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/SubjectName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Android Developer"
+            android:text="Subject Name"
             android:textColor="@color/miniTitle"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -43,7 +44,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Explore the power of android \napplication development"
+            android:text="Explore"
             android:textColor="@color/miniDescription"
             android:textSize="15sp"
             android:textStyle="bold"

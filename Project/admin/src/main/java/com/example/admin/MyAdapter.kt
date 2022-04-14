@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MyAdapter(private val userList : ArrayList<studentuser>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.students_list,

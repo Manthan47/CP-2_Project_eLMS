@@ -28,7 +28,7 @@
             android:name=".DashboardActivity"
             android:exported="true" />
         <activity
-            android:name=".CourseActivity"
+            android:name=".subjects.CourseActivity"
             android:exported="true" />
         <activity
             android:name=".HomeActivity"

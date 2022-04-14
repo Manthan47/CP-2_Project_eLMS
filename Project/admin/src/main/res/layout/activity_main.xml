@@ -104,7 +104,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/material"
+            android:id="@+id/subjectCard"
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
@@ -123,7 +123,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="25dp"
-                    android:text="Material"
+                    android:text="Subject"
                     android:textStyle="bold"/>
 
             </LinearLayout>
@@ -157,7 +157,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="25dp"
-                    android:text="Delete User"
+                    android:text="Delete\nUser"
                     android:textStyle="bold"/>
 
             </LinearLayout>
