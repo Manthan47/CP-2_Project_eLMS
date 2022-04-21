@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.faculty.subjects.CourseActivity
-import com.example.faculty.subjects.CreateAssignmentActivity
 import kotlinx.android.synthetic.main.activity_faculty_main.*
 
 class FacultyMainActivity : AppCompatActivity() {
