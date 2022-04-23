@@ -34,7 +34,7 @@
                 android:text="Choose File" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/noticeTitle"
+                android:id="@+id/materialTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Title" />

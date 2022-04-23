@@ -18,7 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
-            android:name=".subjects.UploadSubjectMaterialActivity"
+            android:name=".subjects.material.GetMaterialActivity"
+            android:exported="true" />
+        <activity
+            android:name=".subjects.StudentSubjectMainActivity"
             android:exported="true" />
         <activity
             android:name=".notice.NoticeActivity"

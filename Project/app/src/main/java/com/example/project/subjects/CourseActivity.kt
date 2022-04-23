@@ -2,7 +2,6 @@ package com.example.project.subjects
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -58,7 +57,7 @@ class CourseActivity : AppCompatActivity() {
         val subada = MyAdapterSubject(subjectArrayList)
         subada.setOnItemClickListener(object : MyAdapterSubject.onItemClickListener{
             override fun onItemClick(position: Int) {
-                val intent = Intent(this@CourseActivity,UploadSubjectMaterialActivity::class.java)
+                val intent = Intent(this@CourseActivity,StudentSubjectMainActivity::class.java)
                 intent.putExtra("title",subjectArrayList[position].title)
                 startActivity(intent)
             }
