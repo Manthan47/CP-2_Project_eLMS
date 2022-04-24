@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.faculty.R
+import com.example.faculty.subjects.assignments.CreateAssignmentActivity
 import kotlinx.android.synthetic.main.activity_subject_main.*
 
 class SubjectMainActivity : AppCompatActivity() {
@@ -23,6 +24,12 @@ class SubjectMainActivity : AppCompatActivity() {
 
         facultyUploadMaterial.setOnClickListener {
             val intent = Intent(this,UploadFacultyMaterialActivity::class.java)
+            intent.putExtra("title",title1)
+            startActivity(intent)
+        }
+
+        facultyCreateAssignment.setOnClickListener {
+            val intent = Intent(this,CreateAssignmentActivity::class.java)
             intent.putExtra("title",title1)
             startActivity(intent)
         }

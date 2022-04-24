@@ -28,7 +28,7 @@
         android:id="@+id/materialList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="30dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="@id/linLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
