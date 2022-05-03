@@ -55,6 +55,11 @@ class CreateAssignmentActivity : AppCompatActivity() {
                 uri= data!!.data!!
                 uriTxt.text=uri.toString()
                 createAssignment.setOnClickListener {
+                    val assignmentTitle = assignmentTitle.text.toString()
+                    if (assignmentTitle.isBlank()) {
+                        Toast.makeText(this, "Title can't be blank", Toast.LENGTH_SHORT).show()
+                        return@setOnClickListener
+                    }
                     upload()
                 }
             }

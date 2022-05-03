@@ -27,7 +27,8 @@
             android:layout_gravity="center_vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            tools:ignore="SmallSp">
 
             <TextView
                 android:id="@+id/getMaterialTitle"
@@ -37,6 +38,15 @@
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/downloadMaterialUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="0sp"
+                android:visibility="invisible"
+                />
 
         </LinearLayout>
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.faculty.R
 import com.example.faculty.subjects.assignments.CreateAssignmentActivity
+import com.example.faculty.subjects.assignments.checkassignments.AssignmentListActivity
 import kotlinx.android.synthetic.main.activity_subject_main.*
 
 class SubjectMainActivity : AppCompatActivity() {
@@ -30,6 +31,12 @@ class SubjectMainActivity : AppCompatActivity() {
 
         facultyCreateAssignment.setOnClickListener {
             val intent = Intent(this,CreateAssignmentActivity::class.java)
+            intent.putExtra("title",title1)
+            startActivity(intent)
+        }
+
+        checkStudentAssignment.setOnClickListener {
+            val intent = Intent(this,AssignmentListActivity::class.java)
             intent.putExtra("title",title1)
             startActivity(intent)
         }

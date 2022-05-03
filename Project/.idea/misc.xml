@@ -44,9 +44,12 @@
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_notice.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_settings.xml" value="0.2" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_student_assignment_list.xml" value="0.24139492753623187" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_student_subject_main_activity.xml" value="0.24139492753623187" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_student_upload_assignment.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/activity_upload_subject_material.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/assignment_list.xml" value="0.24139492753623187" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/card_courses.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/card_frutorials.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/layout/card_popular_courses.xml" value="0.25" />
@@ -61,13 +64,17 @@
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/menu/main.xml" value="0.12708333333333333" />
         <entry key="..\:/SEM VI/CP - II/Project/app/src/main/res/menu/master_bottom_navigation.xml" value="0.264" />
+        <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_assignments_list.xml" value="0.21875" />
+        <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_check_students_assignments.xml" value="0.23324275362318841" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_create_assignment.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_faculty_login.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_faculty_main.xml" value="0.264" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_faculty_subject_list.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_subject_main.xml" value="0.24456521739130435" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_upload_faculty_material.xml" value="0.264" />
+        <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/assignment_list.xml" value="0.223731884057971" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/card_courses.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/student_assignment_list.xml" value="0.23052536231884058" />
       </map>
     </option>
   </component>

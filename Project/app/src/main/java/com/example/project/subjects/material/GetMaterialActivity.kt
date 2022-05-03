@@ -1,8 +1,8 @@
 package com.example.project.subjects.material
 
+import android.Manifest
 import android.app.DownloadManager
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
@@ -17,10 +17,8 @@ import com.example.project.R
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_get_material.*
 import kotlinx.android.synthetic.main.pdfmaterial_list.*
-import java.io.File
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import java.util.jar.Manifest
 
 
 class GetMaterialActivity : AppCompatActivity() {
@@ -31,6 +29,8 @@ class GetMaterialActivity : AppCompatActivity() {
     private var storageReference: StorageReference? = null
 
     var dataUrl:String = ""
+
+    private val REQ_CODE = 123
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,30 +72,25 @@ class GetMaterialActivity : AppCompatActivity() {
 
         val pdfada = MyAdapterMaterial(userArrayList)
         pdfada.setOnItemClickListener(object : MyAdapterMaterial.onItemClickListener{
+            @RequiresApi(Build.VERSION_CODES.M)
             override fun onItemClick(position: Int) {
-                val toast = Toast.makeText(applicationContext, "Clicked", Toast.LENGTH_SHORT)
+
+                dataUrl = downloadMaterialUrl.text.toString()
+
+                //dataUrl = "https://firebasestorage.googleapis.com/v0/b/elms-7cde4.appspot.com/o/Subjects%2FFaculty%2FENGLISH%2Fuploads%2Fdaa58fcf-19d6-4d84-96d6-467f87b0a650?alt=media&token=65ef16ef-5c80-483c-b313-fc071a44a933"
+                if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                    requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),REQ_CODE)
+                } else {
+                    startDownloding()
+                }
+
+                val toast = Toast.makeText(applicationContext, "Downloading", Toast.LENGTH_SHORT)
                 toast.show()
             }
         })
 
-//        downloadMaterial.setOnClickListener {
-//
-//            //val pdfurl = "daa58fcf-19d6-4d84-96d6-467f87b0a650.pdf"
-//            val pdfUrl  = downloadMaterial
-//            //startDownloding()
-//        }
-    }
 
-//    @RequiresApi(Build.VERSION_CODES.M)
-//    fun onItemClick(item: String) {
-//        dataUrl = item
-//        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-//            requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),REQ_CODE)
-//        } else {
-//            startDownloding()
-//        }
-//        Toast.makeText(this, "You clicked on Download Button", Toast.LENGTH_SHORT).show()
-//    }
+    }
 
     private fun startDownloding() {
         val request = DownloadManager.Request(Uri.parse(dataUrl))

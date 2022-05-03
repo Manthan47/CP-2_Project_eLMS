@@ -40,6 +40,11 @@ class MainActivity : AppCompatActivity() {
         val email=editTextEmail.text.toString()
         val password=editTextPassword.text.toString()
 
+        if (email.isBlank() || password.isBlank()) {
+            Toast.makeText(this, "Email and Password can't be blank", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         auth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
             if(task.isSuccessful){
                 val intent= Intent(this,DashboardActivity::class.java)

@@ -62,22 +62,31 @@ class RegisterActivity : AppCompatActivity() {
             val dob=editTextDOB.text.toString()
             val rollno=editTextRollN.text.toString()
             val mobileno=editTextMobile.text.toString()
+            val password=editTextPassword.text.toString()
+            val confirmpassword=editTextConfirmPassword.text.toString()
+
 
             database = FirebaseDatabase.getInstance().getReference("Users")
             val User = User(name,email,dob,rollno,mobileno)
-            database.child(name).setValue(User).addOnSuccessListener {
 
-//                binding.name.text.clear()
-//                binding.email.text.clear()
-//                binding.dob.text.clear()
-//                binding.rollno.text.clear()
+            if (name.isBlank() || email.isBlank() || dob.isBlank() || rollno.isBlank()|| mobileno.isBlank()|| password.isBlank()|| confirmpassword.isBlank()) {
+                Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (password != confirmpassword) {
+                Toast.makeText(this, "Password and Confirm Password do not match", Toast.LENGTH_SHORT)
+                    .show()
+                return@setOnClickListener
+            }
+
+            database.child(name).setValue(User).addOnSuccessListener {
 
                 Toast.makeText(this,"Successfully Saved",Toast.LENGTH_SHORT).show()
 
             }.addOnFailureListener{
 
                 Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
-
 
             }
 

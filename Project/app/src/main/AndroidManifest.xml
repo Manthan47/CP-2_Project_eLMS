@@ -18,6 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".subjects.assignment.StudentUploadAssignmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".subjects.assignment.StudentAssignmentList"
+            android:exported="true" />
+        <activity
             android:name=".subjects.material.GetMaterialActivity"
             android:exported="true" />
         <activity

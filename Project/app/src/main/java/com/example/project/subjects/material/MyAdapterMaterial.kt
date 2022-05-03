@@ -30,6 +30,7 @@ class MyAdapterMaterial(private val userList : ArrayList<Material>) : RecyclerVi
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentitem = userList[position]
         holder.getMaterialTitle.text = currentitem.title
+        holder.downloadMaterialUrl.text = currentitem.pdfurl
     }
 
     override fun getItemCount(): Int {
@@ -38,7 +39,7 @@ class MyAdapterMaterial(private val userList : ArrayList<Material>) : RecyclerVi
 
     class MyViewHolder(itemView : View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
         val getMaterialTitle : TextView = itemView.findViewById(R.id.getMaterialTitle)
-        //val downloadMaterial : TextView = itemView.findViewById(R.id.downloadMaterial)
+        val downloadMaterialUrl : TextView = itemView.findViewById(R.id.downloadMaterialUrl)
         init{
             itemView.setOnClickListener{
                 clickListener.onItemClick(adapterPosition)

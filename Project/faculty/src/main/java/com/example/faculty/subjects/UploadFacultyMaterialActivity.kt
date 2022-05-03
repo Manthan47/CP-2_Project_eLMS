@@ -54,6 +54,11 @@ class UploadFacultyMaterialActivity : AppCompatActivity() {
                 uri= data!!.data!!
                 uriTxt.text=uri.toString()
                 uploadFacultyMaterial.setOnClickListener {
+                    val materialTitle = materialTitle.text.toString()
+                    if (materialTitle.isBlank()) {
+                        Toast.makeText(this, "Title can't be blank", Toast.LENGTH_SHORT).show()
+                        return@setOnClickListener
+                    }
                     upload()
                 }
             }
