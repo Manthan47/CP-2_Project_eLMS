@@ -31,8 +31,9 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/studentName"
                         style="@style/viewParent.headerText"
-                        android:text="Hello abc" />
+                        android:text="Hello Student" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -114,6 +115,7 @@
                             android:text="Courses" />
 
                         <TextView
+                            android:id="@+id/seeAll"
                             style="@style/viewParent"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"

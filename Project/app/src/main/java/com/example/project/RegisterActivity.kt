@@ -65,9 +65,11 @@ class RegisterActivity : AppCompatActivity() {
             val password=editTextPassword.text.toString()
             val confirmpassword=editTextConfirmPassword.text.toString()
 
-
-            database = FirebaseDatabase.getInstance().getReference("Users")
-            val User = User(name,email,dob,rollno,mobileno)
+//            auth = FirebaseAuth.getInstance()
+//            var uid = auth.currentUser?.uid.toString()
+//
+//            database = FirebaseDatabase.getInstance().getReference("Users")
+//            val User = User(name,email,dob,rollno,mobileno)
 
             if (name.isBlank() || email.isBlank() || dob.isBlank() || rollno.isBlank()|| mobileno.isBlank()|| password.isBlank()|| confirmpassword.isBlank()) {
                 Toast.makeText(this, "Fields can't be blank", Toast.LENGTH_SHORT).show()
@@ -80,16 +82,15 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            database.child(name).setValue(User).addOnSuccessListener {
-
-                Toast.makeText(this,"Successfully Saved",Toast.LENGTH_SHORT).show()
-
-            }.addOnFailureListener{
-
-                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
-
-            }
-
+//            database.child(uid).setValue(User).addOnSuccessListener {
+//
+//                Toast.makeText(this,"Successfully Saved",Toast.LENGTH_SHORT).show()
+//
+//            }.addOnFailureListener{
+//
+//                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
+//
+//            }
             register()
             goToLogin()
         }
@@ -115,9 +116,26 @@ class RegisterActivity : AppCompatActivity() {
 
         auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener { task ->
             if(task.isSuccessful){
+
+                auth = FirebaseAuth.getInstance()
+                var uid = auth.currentUser?.uid.toString()
+
+                database = FirebaseDatabase.getInstance().getReference("Users")
+                val User = User(name,email,dob,rollno,mobileno)
+
+                database.child(uid).setValue(User).addOnSuccessListener {
+
+                    Toast.makeText(this,"Successfully Saved",Toast.LENGTH_SHORT).show()
+
+                }.addOnFailureListener{
+
+                    Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
+
+                }
+
+
                 val intent= Intent(this,MainActivity::class.java)
                 startActivity(intent)
-
                 finish()
             }
         }.addOnFailureListener { exception ->

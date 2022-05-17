@@ -15,17 +15,22 @@ class SettingsActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        darkModeSwitch.setOnClickListener {
-            if (darkModeSwitch.isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                darkModeSwitch.text = "Disable dark mode"
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                darkModeSwitch.text = "Enable dark mode"
-            }
-        }
+//        darkModeSwitch.setOnClickListener {
+//            if (darkModeSwitch.isChecked) {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//                darkModeSwitch.text = "Disable dark mode"
+//            } else {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//                darkModeSwitch.text = "Enable dark mode"
+//            }
+//        }
 
         editProfile.setOnClickListener {
+            val intent = Intent(applicationContext,EditProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        editProf.setOnClickListener {
             val intent = Intent(applicationContext,EditProfileActivity::class.java)
             startActivity(intent)
         }

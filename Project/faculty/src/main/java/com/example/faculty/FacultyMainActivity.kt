@@ -3,6 +3,7 @@ package com.example.faculty
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.faculty.notice.NoticeActivity
 import com.example.faculty.subjects.CourseActivity
 import kotlinx.android.synthetic.main.activity_faculty_main.*
 
@@ -13,6 +14,11 @@ class FacultyMainActivity : AppCompatActivity() {
 
         subjectCard.setOnClickListener {
             val intent = Intent(this, CourseActivity::class.java)
+            startActivity(intent)
+        }
+
+        notice.setOnClickListener {
+            val intent = Intent(this, NoticeActivity::class.java)
             startActivity(intent)
         }
 

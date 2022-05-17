@@ -63,13 +63,13 @@
                     android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                style="@style/viewParent"
-                android:text="Forgot Password?"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/newsMoreTextSize"
-                android:layout_gravity="end"
-                android:layout_marginTop="10dp"/>
+<!--            <TextView-->
+<!--                style="@style/viewParent"-->
+<!--                android:text="Forgot Password?"-->
+<!--                android:textColor="@color/primaryTextColor"-->
+<!--                android:textSize="@dimen/newsMoreTextSize"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:layout_marginTop="10dp"/>-->
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cirLoginButton"
@@ -103,14 +103,14 @@
                     android:background="@color/colorPrimaryDark"
                     android:layout_weight="3"/>
 
-                <TextView
-                    style="@style/viewParent.headerText.NoMode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Use other Methods"
-                    android:layout_weight="6"
-                    android:textSize="12sp"
-                    android:textAlignment="center"/>
+<!--                <TextView-->
+<!--                    style="@style/viewParent.headerText.NoMode"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Use other Methods"-->
+<!--                    android:layout_weight="6"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textAlignment="center"/>-->
 
                 <View
                     android:layout_width="0dp"
@@ -120,18 +120,18 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="20dp">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="20dp">-->
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_google_plus"
-                    android:layout_marginLeft="10dp"/>
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_google_plus"-->
+<!--                    android:layout_marginLeft="10dp"/>-->
+<!--            </LinearLayout>-->
 
         </LinearLayout>
     </ScrollView>

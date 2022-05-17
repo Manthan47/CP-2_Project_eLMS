@@ -70,10 +70,12 @@
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_faculty_login.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_faculty_main.xml" value="0.264" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_faculty_subject_list.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_notice.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_subject_main.xml" value="0.24456521739130435" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/activity_upload_faculty_material.xml" value="0.264" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/assignment_list.xml" value="0.223731884057971" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/card_courses.xml" value="0.25" />
+        <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/notice_list.xml" value="0.25" />
         <entry key="..\:/SEM VI/CP - II/Project/faculty/src/main/res/layout/student_assignment_list.xml" value="0.23052536231884058" />
       </map>
     </option>

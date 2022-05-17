@@ -15,24 +15,24 @@ class AdminMainActivity : AppCompatActivity() {
         student.setOnClickListener {
             var i = Intent(this,AdminStudentList::class.java)
             startActivity(i)
-            finish()
+            //finish()
         }
 
         delete_user.setOnClickListener {
             var i = Intent(this,AdminDeleteUser::class.java)
             startActivity(i)
-            finish()
+            //finish()
         }
 
         upload_notice_main.setOnClickListener {
             var i = Intent(this,UploadNotice::class.java)
             startActivity(i)
-            finish()
+            //finish()
         }
         subjectCard.setOnClickListener {
             var i = Intent(this,AdminSubjectActivity::class.java)
             startActivity(i)
-            finish()
+            //finish()
         }
     }
 }
